@@ -43,7 +43,7 @@
 		var loadFacebook = function() {
 		console.log("loadFacebook()");
 		if (NEXTFACEBOOK == '') {
-			NEXTFACEBOOK = "https://graph.facebook.com/search?q=protestoSP&type=post";
+			NEXTFACEBOOK = "https://graph.facebook.com/search?q="+tag+"&type=post";
 		}
 		console.log(NEXTFACEBOOK );
 		$.ajax({
