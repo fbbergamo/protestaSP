@@ -54,11 +54,18 @@
 				if (data.data.length > 0)
 				{
 				faceTemplate = _.template($("#facebookTemplate").html());
+				facebookTemplateVideo = _.template($("#facebookTemplateVideo").html());
 					for (var i=0;i<data.data.length;i++)
 					{ 
 						if (data.data[i].type == "photo") {
 							data.data[i].picture = data.data[i].picture.replace("_s.jpg","_n.jpg");
 							elem = $(faceTemplate({data: data.data[i]}).trim());
+							$('#container').masonry().append(elem).masonry('appended', elem);
+						}
+						
+						if (data.data[i].type == "video" && data.data[i].source.indexOf("youtube.com" )!== -1) {
+							data.data[i].source = data.data[i].source.replace("autoplay=1","autoplay=0");
+							elem = $(facebookTemplateVideo({data: data.data[i]}).trim());
 							$('#container').masonry().append(elem).masonry('appended', elem);
 						}
 					

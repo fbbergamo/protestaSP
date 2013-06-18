@@ -16,49 +16,49 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 		<style>
-		#container
-{
-	max-width: 1280px;
-    overflow: hidden;
-    -webkit-column-count: 3;
-    -webkit-column-gap: 1.875em; /* 30px */
-    -webkit-column-fill: auto;
-    -moz-column-count: 3;
-    -moz-column-gap: 1.875em; /* 30px */
-    -moz-column-fill: auto;
-    column-count: 3;
-    column-gap: 1.875em; /* 30px */
-    column-fill: auto;
-	margin: 0 auto;
-}
-    .item
-    {
-        -webkit-column-break-inside: avoid;
-        -moz-column-break-inside: avoid;
-        column-break-inside: avoid;
-    }
- 
-@media only screen and ( max-width: 40em ) /* 640px */
-{
-    #container
-    {
-        -webkit-column-count: 2;
-        -webkit-column-gap: 0.938em; /* 15px */
-        -moz-column-count: 2;
-        -moz-column-gap: 0.938em; /* 15px */
-        column-count: 2;
-        column-gap: 0.938em; /* 15px */
-    }
-}
-@media only screen and ( max-width: 20em ) /* 320px */
-{
-    #container
-    {
-        -webkit-column-count: auto;
-        -moz-column-count: auto;
-        column-count: auto;
-    }
-}
+				#container
+		{
+			max-width: 1280px;
+			overflow: hidden;
+			-webkit-column-count: 3;
+			-webkit-column-gap: 1.875em; /* 30px */
+			-webkit-column-fill: auto;
+			-moz-column-count: 3;
+			-moz-column-gap: 1.875em; /* 30px */
+			-moz-column-fill: auto;
+			column-count: 3;
+			column-gap: 1.875em; /* 30px */
+			column-fill: auto;
+			margin: 0 auto;
+		}
+			.item
+			{
+				-webkit-column-break-inside: avoid;
+				-moz-column-break-inside: avoid;
+				column-break-inside: avoid;
+			}
+		 
+		@media only screen and ( max-width: 40em ) /* 640px */
+		{
+			#container
+			{
+				-webkit-column-count: 2;
+				-webkit-column-gap: 0.938em; /* 15px */
+				-moz-column-count: 2;
+				-moz-column-gap: 0.938em; /* 15px */
+				column-count: 2;
+				column-gap: 0.938em; /* 15px */
+			}
+		}
+		@media only screen and ( max-width: 20em ) /* 320px */
+		{
+			#container
+			{
+				-webkit-column-count: auto;
+				-moz-column-count: auto;
+				column-count: auto;
+			}
+		}
 		</style>
 	<script type="text/template" id="instagramTemplate">
 			<div class="item">
@@ -66,9 +66,15 @@
 			</div>
 	</script>
 	
-		<script type="text/template" id="facebookTemplate">
+	<script type="text/template" id="facebookTemplate">
 			<div class="item">
 				<a href="<%= data.link %>" target="new"> <img width="320" height="320" src="<%= data.picture %>" /> </a>                               
+			</div>
+	</script>
+	
+		<script type="text/template" id="facebookTemplateVideo">
+			<div class="item">
+				<iframe width="320" height="320" src="<%= data.source %>" frameborder="0" allowfullscreen></iframe>                             
 			</div>
 	</script>
 
@@ -98,14 +104,14 @@
 		</div>
 		<div style="margin: 20px auto 0px auto; text-align: center;">
 		<button style='padding: 7px 15px 8px 15px; border: none;  font-size: 13px; font-weight: bold; cursor: pointer; opacity: 0.9; background-color: #d9522c; color:white; width: 180px;
-height: 70px; font-size: 25px;' onclick="loadInstagram();loadFacebook();">+ Fotos!</button>
+height: 70px; font-size: 25px;' onclick="loadInstagram();loadFacebook();">+ Mídias!</button>
 		</div>
 		<script src="js/vendor/jquery-1.9.1.min.js"></script>
 		<script src="js/underscore.js"></script>
         <script src="js/plugins.js"></script>
 		 <script src="js/scrool.js"></script>
 		<script src="js/masonary.js"></script>
-        <script src="js/main.js?v=12"></script>
+        <script src="js/main.js?v=3"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
 			loadInstagram();
